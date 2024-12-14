@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		BDF0D34D2D067CEE00113302 /* WeatherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0E118D2D07A2C60070C752 /* FixedSizeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixedSizeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BDF0D34F2D067CEE00113302 /* WeatherDemo */ = {
+		BD0E118F2D07A2C60070C752 /* FixedSizeDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = WeatherDemo;
+			path = FixedSizeDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BDF0D34A2D067CEE00113302 /* Frameworks */ = {
+		BD0E118A2D07A2C60070C752 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BDF0D3442D067CEE00113302 = {
+		BD0E11842D07A2C60070C752 = {
 			isa = PBXGroup;
 			children = (
-				BDF0D34F2D067CEE00113302 /* WeatherDemo */,
-				BDF0D34E2D067CEE00113302 /* Products */,
+				BD0E118F2D07A2C60070C752 /* FixedSizeDemo */,
+				BD0E118E2D07A2C60070C752 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BDF0D34E2D067CEE00113302 /* Products */ = {
+		BD0E118E2D07A2C60070C752 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDF0D34D2D067CEE00113302 /* WeatherDemo.app */,
+				BD0E118D2D07A2C60070C752 /* FixedSizeDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BDF0D34C2D067CEE00113302 /* WeatherDemo */ = {
+		BD0E118C2D07A2C60070C752 /* FixedSizeDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherDemo" */;
+			buildConfigurationList = BD0E119B2D07A2C70070C752 /* Build configuration list for PBXNativeTarget "FixedSizeDemo" */;
 			buildPhases = (
-				BDF0D3492D067CEE00113302 /* Sources */,
-				BDF0D34A2D067CEE00113302 /* Frameworks */,
-				BDF0D34B2D067CEE00113302 /* Resources */,
+				BD0E11892D07A2C60070C752 /* Sources */,
+				BD0E118A2D07A2C60070C752 /* Frameworks */,
+				BD0E118B2D07A2C60070C752 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BDF0D34F2D067CEE00113302 /* WeatherDemo */,
+				BD0E118F2D07A2C60070C752 /* FixedSizeDemo */,
 			);
-			name = WeatherDemo;
+			name = FixedSizeDemo;
 			packageProductDependencies = (
 			);
-			productName = WeatherDemo;
-			productReference = BDF0D34D2D067CEE00113302 /* WeatherDemo.app */;
+			productName = FixedSizeDemo;
+			productReference = BD0E118D2D07A2C60070C752 /* FixedSizeDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BDF0D3452D067CEE00113302 /* Project object */ = {
+		BD0E11852D07A2C60070C752 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					BDF0D34C2D067CEE00113302 = {
+					BD0E118C2D07A2C60070C752 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
-			buildConfigurationList = BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherDemo" */;
+			buildConfigurationList = BD0E11882D07A2C60070C752 /* Build configuration list for PBXProject "FixedSizeDemo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = BDF0D3442D067CEE00113302;
+			mainGroup = BD0E11842D07A2C60070C752;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = BDF0D34E2D067CEE00113302 /* Products */;
+			productRefGroup = BD0E118E2D07A2C60070C752 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BDF0D34C2D067CEE00113302 /* WeatherDemo */,
+				BD0E118C2D07A2C60070C752 /* FixedSizeDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BDF0D34B2D067CEE00113302 /* Resources */ = {
+		BD0E118B2D07A2C60070C752 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BDF0D3492D067CEE00113302 /* Sources */ = {
+		BD0E11892D07A2C60070C752 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BDF0D3592D067CEF00113302 /* Debug */ = {
+		BD0E11992D07A2C70070C752 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		BDF0D35A2D067CEF00113302 /* Release */ = {
+		BD0E119A2D07A2C70070C752 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,14 +244,14 @@
 			};
 			name = Release;
 		};
-		BDF0D35C2D067CEF00113302 /* Debug */ = {
+		BD0E119C2D07A2C70070C752 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeatherDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FixedSizeDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = LCRLD36TZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -265,7 +265,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.WeatherDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.FixedSizeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -273,14 +273,14 @@
 			};
 			name = Debug;
 		};
-		BDF0D35D2D067CEF00113302 /* Release */ = {
+		BD0E119D2D07A2C70070C752 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WeatherDemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FixedSizeDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = LCRLD36TZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -294,7 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.WeatherDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.FixedSizeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,25 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherDemo" */ = {
+		BD0E11882D07A2C60070C752 /* Build configuration list for PBXProject "FixedSizeDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BDF0D3592D067CEF00113302 /* Debug */,
-				BDF0D35A2D067CEF00113302 /* Release */,
+				BD0E11992D07A2C70070C752 /* Debug */,
+				BD0E119A2D07A2C70070C752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherDemo" */ = {
+		BD0E119B2D07A2C70070C752 /* Build configuration list for PBXNativeTarget "FixedSizeDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BDF0D35C2D067CEF00113302 /* Debug */,
-				BDF0D35D2D067CEF00113302 /* Release */,
+				BD0E119C2D07A2C70070C752 /* Debug */,
+				BD0E119D2D07A2C70070C752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BDF0D3452D067CEE00113302 /* Project object */;
+	rootObject = BD0E11852D07A2C60070C752 /* Project object */;
 }
