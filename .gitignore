@@ -4,6 +4,10 @@
 
 .DS_Store
 
+## Hide your Secrets (and don't add them to Git)
+# Secret.swift
+
+
 ## User settings
 xcuserdata/
 
