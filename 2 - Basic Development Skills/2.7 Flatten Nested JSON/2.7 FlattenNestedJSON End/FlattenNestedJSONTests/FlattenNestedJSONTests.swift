@@ -14,9 +14,9 @@ struct FlattenNestedJSONTests {
 
     let nestedJSONData = """
     {
-      "id": 10,
+      "id": 27,
       "contact_info": {
-        "email": "test@test.com",
+        "email": "paul@supereasyapps.com",
         "name": "Paul"
       },
       "preferences": {
@@ -25,7 +25,7 @@ struct FlattenNestedJSONTests {
         }
       }
     }
-    """
+    """.data(using: .utf8)
 
     @Test func parseNestedJSON() async throws {
 
