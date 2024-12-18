@@ -26,11 +26,28 @@ struct ContentView: View {
                 Button("Buy Now") {
                     print("Buy it now")
                 }
+                .bold()
+                .buttonStyle(.borderedProminent)
+                
+                Button {
+                    print("BUY")
+                } label: {
+                    Label("BUY NOW", systemImage: "cart.fill")
+                        .labelStyle(.titleAndIcon)
+                        .bold()
+                }
+                .buttonStyle(.borderedProminent)
+
+                
                 Spacer()
                 
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
+                Image(systemName: "cloud.sun.fill") //"sun.max.fill")
+                    .resizable()
+                    .symbolRenderingMode(.multicolor)
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+//                    .imageScale(.large)
+//                    .foregroundStyle(.tint)
                 Text("Hello, world!")
                     .font(.largeTitle)
                     .multilineTextAlignment(.trailing)
