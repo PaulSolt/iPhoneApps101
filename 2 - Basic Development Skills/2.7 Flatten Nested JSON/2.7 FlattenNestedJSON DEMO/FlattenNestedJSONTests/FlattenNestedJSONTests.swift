@@ -12,8 +12,7 @@ import Foundation
 
 struct FlattenNestedJSONTests {
 
-    let nestedJSONData =
-    """
+    let nestedJSONData = """
     {
       "id": 27,
       "contact_info": {
@@ -29,47 +28,19 @@ struct FlattenNestedJSONTests {
     """.data(using: .utf8)!
 
     @Test func parseNestedJSON() async throws {
+
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let user = try decoder.decode(User.self, from: nestedJSONData)
-
-        #expect(user.id == 27)
-        #expect(user.email == "paul@supereasyapps.com")
-        #expect(user.name == "Paul")
-        #expect(user.isSubscribed == true)
+        // TODO: create Structs that are decodable
+        _ = try decoder.decode(User.self, from: nestedJSONData)
     }
 
-    let nestedJSONMissingNameData =
-    """
-    {
-      "id": 27,
-      "contact_info": {
-        "email": "paul@supereasyapps.com",
-      },
-      "preferences": {
-        "contact": {
-          "newsletter": true
-        }
-      }
-    }
-    """.data(using: .utf8)!
-
-    @Test func parseNestedJSON_withoutName() async throws {
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let user = try decoder.decode(User.self, from: nestedJSONMissingNameData)
-
-        #expect(user.id == 27)
-        #expect(user.email == "paul@supereasyapps.com")
-        #expect(user.name == nil)
-        #expect(user.isSubscribed == true)
-    }
 }
 
 struct User: Decodable {
     let id: Int
     let email: String
-    let name: String? // Use optional types when fields may be missing
+    let name: String
     let isSubscribed: Bool
 
     enum CodingKeys: CodingKey {
@@ -80,7 +51,7 @@ struct User: Decodable {
 
     struct ContactInfo: Decodable {
         let email: String
-        let name: String?
+        let name: String
     }
 
     struct Preferences: Decodable {
