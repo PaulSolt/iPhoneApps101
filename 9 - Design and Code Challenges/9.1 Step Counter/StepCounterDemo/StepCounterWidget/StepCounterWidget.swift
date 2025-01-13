@@ -1,8 +1,8 @@
 //
-//  StepUpWidget.swift
-//  StepUpWidget
+//  StepCounterWidget.swift
+//  StepCounterWidget
 //
-//  Created by Paul Solt on 12/19/24.
+//  Created by Paul Solt on 1/11/25.
 //
 
 import WidgetKit
@@ -41,34 +41,32 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationAppIntent
 }
 
-struct StepUpWidgetEntryView : View {
+// 1. Layout
+// 2. Design
+// 3. Cleanup
+
+struct StepCounterWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("2,423")
-                .fontWeight(.bold)
-                .monospaced()
-            Text("steps today")
-                .font(.system(size: 14))
-                .monospaced()
-                .kerning(0.5)
+        VStack(alignment: .leading) { //, spacing: 0) {
+            Text("4,790")
+                .font(.system(size: 30, weight: .semibold).monospaced()) // SF Mono (Menlo)
+//                .foregroundStyle(.green)
+
+            Text("steps")
+                .font(.system(size: 22))
+                .foregroundStyle(.secondary)
 
             Spacer()
-
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading) {//}, spacing: 10) {
                 HStack {
-                    Image(systemName: "bolt")
-                    VStack(alignment: .leading) {
-                        Text("151 days")
-                        Text("streak")
-                    }
-                    .font(.system(size: 14))
-                    .monospaced()
-                    Spacer()
+                    Image(systemName: "bolt.fill") // shoeprints.fill
+                    Text("171 days!")
                 }
+                .font(.system(size: 16))
 
-                StepProgress(count: 2)
+                StepProgress(progress: 3)
             }
         }
         .foregroundStyle(.green)
@@ -76,38 +74,39 @@ struct StepUpWidgetEntryView : View {
 }
 
 struct StepProgress: View {
-    var count: Int
+    let progress: Int // [0, 10]  0, 1, 4, 10 (-1, 11+)
+
+    let spacing: CGFloat = 3
+    let rows: Int = 5
+    var segmentsPerRow: Int  = 5
 
     var body: some View {
-        VStack {
-            HStack(spacing: 3) {
-                ForEach(1...5, id: \.self) { index in
-                    let isFilled = index <= count
-                    Rectangle()
-                        .frame(height: 5)
-                        .foregroundStyle(isFilled ? .primary : .secondary)
-                }
-            }
-            
-            HStack(spacing: 3) {
-                ForEach(1...5, id: \.self) { index in
-                    let isFilled = index + 5 <= count
-                    Rectangle()
-                        .frame(height: 5)
-                        .foregroundStyle(isFilled ? .primary : .secondary)
+        VStack(spacing: spacing) {
+            ForEach(1...rows, id: \.self) { row in
+
+                HStack(spacing: spacing) {
+                    ForEach(1...segmentsPerRow, id: \.self) { segment in
+                        let index = segment + row * segmentsPerRow
+                        let isFilled = index <= progress
+                        let _ = print("\(row), \(index)")
+
+                        Rectangle()
+                            .frame(height: 5)
+                            .foregroundStyle(isFilled ? .primary : .secondary)
+                    }
                 }
             }
         }
     }
 }
 
-
-struct StepUpWidget: Widget {
-    let kind: String = "StepUpWidget"
+struct StepCounterWidget: Widget {
+    let kind: String = "StepCounterWidget"
 
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
-            StepUpWidgetEntryView(entry: entry)
+            StepCounterWidgetEntryView(entry: entry)
+//                .containerBackground(.fill.tertiary, for: .widget)
                 .containerBackground(.black, for: .widget)
         }
     }
@@ -128,7 +127,7 @@ extension ConfigurationAppIntent {
 }
 
 #Preview(as: .systemSmall) {
-    StepUpWidget()
+    StepCounterWidget()
 } timeline: {
     SimpleEntry(date: .now, configuration: .smiley)
     SimpleEntry(date: .now, configuration: .starEyes)

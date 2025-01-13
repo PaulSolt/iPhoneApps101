@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD859C122D14D6DE0062CB44 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD859C112D14D6DE0062CB44 /* WidgetKit.framework */; };
-		BD859C142D14D6DE0062CB44 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD859C132D14D6DE0062CB44 /* SwiftUI.framework */; };
-		BD859C252D14D6DF0062CB44 /* StepUpWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BD859C0F2D14D6DE0062CB44 /* StepUpWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BDD6A15D2D32E76A00168753 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD6A15C2D32E76900168753 /* WidgetKit.framework */; };
+		BDD6A15F2D32E76A00168753 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD6A15E2D32E76A00168753 /* SwiftUI.framework */; };
+		BDD6A1702D32E76B00168753 /* StepCounterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BDD6A15A2D32E76900168753 /* StepCounterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BD859C232D14D6DF0062CB44 /* PBXContainerItemProxy */ = {
+		BDD6A16E2D32E76B00168753 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BD859BF22D14D5200062CB44 /* Project object */;
+			containerPortal = BDD6A13D2D32E63200168753 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BD859C0E2D14D6DE0062CB44;
-			remoteInfo = StepUpWidgetExtension;
+			remoteGlobalIDString = BDD6A1592D32E76900168753;
+			remoteInfo = StepCounterWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BD859C2A2D14D6DF0062CB44 /* Embed Foundation Extensions */ = {
+		BDD6A1752D32E76B00168753 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BD859C252D14D6DF0062CB44 /* StepUpWidgetExtension.appex in Embed Foundation Extensions */,
+				BDD6A1702D32E76B00168753 /* StepCounterWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -37,82 +37,82 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		BD859BFA2D14D5200062CB44 /* StepUp_Count.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepUp_Count.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD859C0F2D14D6DE0062CB44 /* StepUpWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StepUpWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD859C112D14D6DE0062CB44 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		BD859C132D14D6DE0062CB44 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BDD6A1452D32E63200168753 /* StepCounterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepCounterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD6A15A2D32E76900168753 /* StepCounterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StepCounterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD6A15C2D32E76900168753 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BDD6A15E2D32E76A00168753 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		BD859C262D14D6DF0062CB44 /* Exceptions for "StepUpWidget" folder in "StepUpWidgetExtension" target */ = {
+		BDD6A1712D32E76B00168753 /* Exceptions for "StepCounterWidget" folder in "StepCounterWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = BD859C0E2D14D6DE0062CB44 /* StepUpWidgetExtension */;
+			target = BDD6A1592D32E76900168753 /* StepCounterWidgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BD859BFC2D14D5200062CB44 /* StepUp_Count */ = {
+		BDD6A1472D32E63200168753 /* StepCounterDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = StepUp_Count;
+			path = StepCounterDemo;
 			sourceTree = "<group>";
 		};
-		BD859C152D14D6DE0062CB44 /* StepUpWidget */ = {
+		BDD6A1602D32E76A00168753 /* StepCounterWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				BD859C262D14D6DF0062CB44 /* Exceptions for "StepUpWidget" folder in "StepUpWidgetExtension" target */,
+				BDD6A1712D32E76B00168753 /* Exceptions for "StepCounterWidget" folder in "StepCounterWidgetExtension" target */,
 			);
-			path = StepUpWidget;
+			path = StepCounterWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BD859BF72D14D5200062CB44 /* Frameworks */ = {
+		BDD6A1422D32E63200168753 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD859C0C2D14D6DE0062CB44 /* Frameworks */ = {
+		BDD6A1572D32E76900168753 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD859C142D14D6DE0062CB44 /* SwiftUI.framework in Frameworks */,
-				BD859C122D14D6DE0062CB44 /* WidgetKit.framework in Frameworks */,
+				BDD6A15F2D32E76A00168753 /* SwiftUI.framework in Frameworks */,
+				BDD6A15D2D32E76A00168753 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD859BF12D14D5200062CB44 = {
+		BDD6A13C2D32E63200168753 = {
 			isa = PBXGroup;
 			children = (
-				BD859BFC2D14D5200062CB44 /* StepUp_Count */,
-				BD859C152D14D6DE0062CB44 /* StepUpWidget */,
-				BD859C102D14D6DE0062CB44 /* Frameworks */,
-				BD859BFB2D14D5200062CB44 /* Products */,
+				BDD6A1472D32E63200168753 /* StepCounterDemo */,
+				BDD6A1602D32E76A00168753 /* StepCounterWidget */,
+				BDD6A15B2D32E76900168753 /* Frameworks */,
+				BDD6A1462D32E63200168753 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BD859BFB2D14D5200062CB44 /* Products */ = {
+		BDD6A1462D32E63200168753 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD859BFA2D14D5200062CB44 /* StepUp_Count.app */,
-				BD859C0F2D14D6DE0062CB44 /* StepUpWidgetExtension.appex */,
+				BDD6A1452D32E63200168753 /* StepCounterDemo.app */,
+				BDD6A15A2D32E76900168753 /* StepCounterWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BD859C102D14D6DE0062CB44 /* Frameworks */ = {
+		BDD6A15B2D32E76900168753 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BD859C112D14D6DE0062CB44 /* WidgetKit.framework */,
-				BD859C132D14D6DE0062CB44 /* SwiftUI.framework */,
+				BDD6A15C2D32E76900168753 /* WidgetKit.framework */,
+				BDD6A15E2D32E76A00168753 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -120,99 +120,99 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BD859BF92D14D5200062CB44 /* StepUp_Count */ = {
+		BDD6A1442D32E63200168753 /* StepCounterDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD859C082D14D5210062CB44 /* Build configuration list for PBXNativeTarget "StepUp_Count" */;
+			buildConfigurationList = BDD6A1532D32E63300168753 /* Build configuration list for PBXNativeTarget "StepCounterDemo" */;
 			buildPhases = (
-				BD859BF62D14D5200062CB44 /* Sources */,
-				BD859BF72D14D5200062CB44 /* Frameworks */,
-				BD859BF82D14D5200062CB44 /* Resources */,
-				BD859C2A2D14D6DF0062CB44 /* Embed Foundation Extensions */,
+				BDD6A1412D32E63200168753 /* Sources */,
+				BDD6A1422D32E63200168753 /* Frameworks */,
+				BDD6A1432D32E63200168753 /* Resources */,
+				BDD6A1752D32E76B00168753 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BD859C242D14D6DF0062CB44 /* PBXTargetDependency */,
+				BDD6A16F2D32E76B00168753 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				BD859BFC2D14D5200062CB44 /* StepUp_Count */,
+				BDD6A1472D32E63200168753 /* StepCounterDemo */,
 			);
-			name = StepUp_Count;
+			name = StepCounterDemo;
 			packageProductDependencies = (
 			);
-			productName = StepUp_Count;
-			productReference = BD859BFA2D14D5200062CB44 /* StepUp_Count.app */;
+			productName = StepCounterDemo;
+			productReference = BDD6A1452D32E63200168753 /* StepCounterDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BD859C0E2D14D6DE0062CB44 /* StepUpWidgetExtension */ = {
+		BDD6A1592D32E76900168753 /* StepCounterWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD859C272D14D6DF0062CB44 /* Build configuration list for PBXNativeTarget "StepUpWidgetExtension" */;
+			buildConfigurationList = BDD6A1722D32E76B00168753 /* Build configuration list for PBXNativeTarget "StepCounterWidgetExtension" */;
 			buildPhases = (
-				BD859C0B2D14D6DE0062CB44 /* Sources */,
-				BD859C0C2D14D6DE0062CB44 /* Frameworks */,
-				BD859C0D2D14D6DE0062CB44 /* Resources */,
+				BDD6A1562D32E76900168753 /* Sources */,
+				BDD6A1572D32E76900168753 /* Frameworks */,
+				BDD6A1582D32E76900168753 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BD859C152D14D6DE0062CB44 /* StepUpWidget */,
+				BDD6A1602D32E76A00168753 /* StepCounterWidget */,
 			);
-			name = StepUpWidgetExtension;
+			name = StepCounterWidgetExtension;
 			packageProductDependencies = (
 			);
-			productName = StepUpWidgetExtension;
-			productReference = BD859C0F2D14D6DE0062CB44 /* StepUpWidgetExtension.appex */;
+			productName = StepCounterWidgetExtension;
+			productReference = BDD6A15A2D32E76900168753 /* StepCounterWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BD859BF22D14D5200062CB44 /* Project object */ = {
+		BDD6A13D2D32E63200168753 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					BD859BF92D14D5200062CB44 = {
+					BDD6A1442D32E63200168753 = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					BD859C0E2D14D6DE0062CB44 = {
+					BDD6A1592D32E76900168753 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = BD859BF52D14D5200062CB44 /* Build configuration list for PBXProject "StepUp_Count" */;
+			buildConfigurationList = BDD6A1402D32E63200168753 /* Build configuration list for PBXProject "StepCounterDemo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = BD859BF12D14D5200062CB44;
+			mainGroup = BDD6A13C2D32E63200168753;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = BD859BFB2D14D5200062CB44 /* Products */;
+			productRefGroup = BDD6A1462D32E63200168753 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BD859BF92D14D5200062CB44 /* StepUp_Count */,
-				BD859C0E2D14D6DE0062CB44 /* StepUpWidgetExtension */,
+				BDD6A1442D32E63200168753 /* StepCounterDemo */,
+				BDD6A1592D32E76900168753 /* StepCounterWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BD859BF82D14D5200062CB44 /* Resources */ = {
+		BDD6A1432D32E63200168753 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD859C0D2D14D6DE0062CB44 /* Resources */ = {
+		BDD6A1582D32E76900168753 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,14 +222,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BD859BF62D14D5200062CB44 /* Sources */ = {
+		BDD6A1412D32E63200168753 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD859C0B2D14D6DE0062CB44 /* Sources */ = {
+		BDD6A1562D32E76900168753 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,15 +239,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BD859C242D14D6DF0062CB44 /* PBXTargetDependency */ = {
+		BDD6A16F2D32E76B00168753 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BD859C0E2D14D6DE0062CB44 /* StepUpWidgetExtension */;
-			targetProxy = BD859C232D14D6DF0062CB44 /* PBXContainerItemProxy */;
+			target = BDD6A1592D32E76900168753 /* StepCounterWidgetExtension */;
+			targetProxy = BDD6A16E2D32E76B00168753 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		BD859C062D14D5210062CB44 /* Debug */ = {
+		BDD6A1512D32E63300168753 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -310,7 +310,7 @@
 			};
 			name = Debug;
 		};
-		BD859C072D14D5210062CB44 /* Release */ = {
+		BDD6A1522D32E63300168753 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -366,14 +366,14 @@
 			};
 			name = Release;
 		};
-		BD859C092D14D5210062CB44 /* Debug */ = {
+		BDD6A1542D32E63300168753 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StepUp_Count/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StepCounterDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = LCRLD36TZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -387,7 +387,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paulsolt.StepUp-Count";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.StepCounterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -395,14 +395,14 @@
 			};
 			name = Debug;
 		};
-		BD859C0A2D14D5210062CB44 /* Release */ = {
+		BDD6A1552D32E63300168753 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"StepUp_Count/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"StepCounterDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = LCRLD36TZ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -416,7 +416,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paulsolt.StepUp-Count";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.StepCounterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -424,7 +424,7 @@
 			};
 			name = Release;
 		};
-		BD859C282D14D6DF0062CB44 /* Debug */ = {
+		BDD6A1732D32E76B00168753 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,8 +433,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LCRLD36TZ6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StepUpWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = StepUpWidget;
+				INFOPLIST_FILE = StepCounterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StepCounterWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -442,7 +442,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paulsolt.StepUp-Count.StepUpWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.StepCounterDemo.StepCounterWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -451,7 +451,7 @@
 			};
 			name = Debug;
 		};
-		BD859C292D14D6DF0062CB44 /* Release */ = {
+		BDD6A1742D32E76B00168753 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,8 +460,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LCRLD36TZ6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = StepUpWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = StepUpWidget;
+				INFOPLIST_FILE = StepCounterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StepCounterWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,7 +469,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paulsolt.StepUp-Count.StepUpWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.paulsolt.StepCounterDemo.StepCounterWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -481,34 +481,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD859BF52D14D5200062CB44 /* Build configuration list for PBXProject "StepUp_Count" */ = {
+		BDD6A1402D32E63200168753 /* Build configuration list for PBXProject "StepCounterDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD859C062D14D5210062CB44 /* Debug */,
-				BD859C072D14D5210062CB44 /* Release */,
+				BDD6A1512D32E63300168753 /* Debug */,
+				BDD6A1522D32E63300168753 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD859C082D14D5210062CB44 /* Build configuration list for PBXNativeTarget "StepUp_Count" */ = {
+		BDD6A1532D32E63300168753 /* Build configuration list for PBXNativeTarget "StepCounterDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD859C092D14D5210062CB44 /* Debug */,
-				BD859C0A2D14D5210062CB44 /* Release */,
+				BDD6A1542D32E63300168753 /* Debug */,
+				BDD6A1552D32E63300168753 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD859C272D14D6DF0062CB44 /* Build configuration list for PBXNativeTarget "StepUpWidgetExtension" */ = {
+		BDD6A1722D32E76B00168753 /* Build configuration list for PBXNativeTarget "StepCounterWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD859C282D14D6DF0062CB44 /* Debug */,
-				BD859C292D14D6DF0062CB44 /* Release */,
+				BDD6A1732D32E76B00168753 /* Debug */,
+				BDD6A1742D32E76B00168753 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BD859BF22D14D5200062CB44 /* Project object */;
+	rootObject = BDD6A13D2D32E63200168753 /* Project object */;
 }
