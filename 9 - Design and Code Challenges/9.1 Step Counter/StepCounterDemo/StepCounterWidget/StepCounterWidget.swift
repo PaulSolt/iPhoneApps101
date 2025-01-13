@@ -45,12 +45,27 @@ struct SimpleEntry: TimelineEntry {
 // 2. Design
 // 3. Cleanup
 
+import Foundation
+
+struct StepData {
+    let steps: Int
+    let streakInDays: Int
+    let progress: Int
+
+    static let mock = StepData(
+        steps: 4790,
+        streakInDays: 173,
+        progress: 4
+    )
+}
+
 struct StepCounterWidgetEntryView : View {
+    var stepData: StepData = .mock
     var entry: Provider.Entry
 
     var body: some View {
         VStack(alignment: .leading) { //, spacing: 0) {
-            Text("4,790")
+            Text("\(stepData.steps)") //.precision(.fractionLength(0)))")
                 .font(.system(size: 30, weight: .semibold).monospaced()) // SF Mono (Menlo)
 //                .foregroundStyle(.green)
 
@@ -62,11 +77,11 @@ struct StepCounterWidgetEntryView : View {
             VStack(alignment: .leading) {//}, spacing: 10) {
                 HStack {
                     Image(systemName: "bolt.fill") // shoeprints.fill
-                    Text("171 days!")
+                    Text("\(stepData.streakInDays) days!")
                 }
                 .font(.system(size: 16))
 
-                StepProgress(progress: 3)
+                StepProgress(progress: stepData.progress)
             }
         }
         .foregroundStyle(.green)
@@ -77,8 +92,9 @@ struct StepProgress: View {
     let progress: Int // [0, 10]  0, 1, 4, 10 (-1, 11+)
 
     let spacing: CGFloat = 3
-    let rows: Int = 5
-    var segmentsPerRow: Int  = 5
+    let height: CGFloat = 5
+    let rows: Int = 2
+    var segmentsPerRow: Int = 5
 
     var body: some View {
         VStack(spacing: spacing) {
@@ -86,12 +102,12 @@ struct StepProgress: View {
 
                 HStack(spacing: spacing) {
                     ForEach(1...segmentsPerRow, id: \.self) { segment in
-                        let index = segment + row * segmentsPerRow
+                        let index = segment + (row - 1) * segmentsPerRow
                         let isFilled = index <= progress
                         let _ = print("\(row), \(index)")
 
                         Rectangle()
-                            .frame(height: 5)
+                            .frame(height: height)
                             .foregroundStyle(isFilled ? .primary : .secondary)
                     }
                 }
@@ -106,8 +122,16 @@ struct StepCounterWidget: Widget {
     var body: some WidgetConfiguration {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             StepCounterWidgetEntryView(entry: entry)
-//                .containerBackground(.fill.tertiary, for: .widget)
                 .containerBackground(.black, for: .widget)
+//                .containerBackground(for: .widget) { // EXTRA: If time
+//                    ZStack {
+//                        Color.black
+//                        ContainerRelativeShape()
+//                            .stroke(lineWidth: 5)
+//                            .foregroundStyle(.green)
+//                    }
+//                }
+
         }
     }
 }
