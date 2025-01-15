@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "filename" : "GradientButton.pdf",
+      "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 9,
+          "left" : 7,
+          "right" : 7,
+          "top" : 23
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      }
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
