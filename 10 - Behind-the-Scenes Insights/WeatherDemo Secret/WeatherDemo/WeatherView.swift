@@ -31,21 +31,6 @@ enum SearchMode: String, CaseIterable {
     case coordinates = "Latitude & Longitude"
 }
 
-struct MaterialTextFieldStyle: TextFieldStyle {
-    let material: Material
-
-    init(material: Material = .thinMaterial) {
-        self.material = material
-    }
-
-    func _body(configuration: TextField<Self._Label>) -> some View {
-        configuration
-            .padding(6)
-            .background(material)
-            .cornerRadius(5)
-    }
-}
-
 struct OvalTextFieldStyle: TextFieldStyle {
     let color: Color
 
@@ -90,17 +75,16 @@ struct WeatherView: View {
     @State private var humidity = "67% Humidity" // "-% Humidity"
 
     var body: some View {
-        NavigationStack {
             ZStack {
-                Rectangle() // ContainerRelativeShape()
+                Rectangle()
                     .foregroundStyle(.blue.gradient)
                     .ignoresSafeArea()
 
-                Image(.blueSky)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(minWidth: 0, minHeight: 0) // Required to prevent content moving offscreen
-                    .ignoresSafeArea()
+//                Image(.blueSky)
+//                    .resizable()
+//                    .scaledToFill()
+//                    .frame(minWidth: 0, minHeight: 0) // Required to prevent content moving offscreen
+//                    .ignoresSafeArea()
 
                 VStack {
                     // Weather Display
@@ -152,7 +136,7 @@ struct WeatherView: View {
                     .padding(.top, 20)
                     .padding(.bottom, 40)
                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
-
+                    .padding(.top, 20)
                     // Segmented Control to Switch Modes
                     //                    Picker("Search Mode", selection: $searchMode) {
                     //                        ForEach(SearchMode.allCases, id: \.self) { mode in
@@ -224,13 +208,10 @@ struct WeatherView: View {
                     .foregroundStyle(.blue)
                     .tint(.white)
 
-
                     Spacer()
                 }
-//                .navigationTitle("Daily Weather")
                 .padding(.horizontal, 40)
             }
-        }
         .overlay {
             VStack {
                 Spacer()
@@ -381,26 +362,28 @@ extension Double {
     }
 }
 
-struct TemperatureToggleView: View {
-    @Binding var selectedUnit: TemperatureUnit
+//struct TemperatureToggleView: View {
+//    @Binding var selectedUnit: TemperatureUnit
+//
+//    var body: some View {
+//        VStack(spacing: 20) {
+//            Picker("Unit", selection: $selectedUnit) {
+////                ForEach(TemperatureUnit.allCases, id: \.self) { unit in
+//                ForEach(["C", "F"], id: \.self) { unit in
+//                    Text("º\(unit)").tag(unit)
+////                    Text("º\(unit.rawValue)").tag(unit)
+//                }
+//            }
+//            .frame(width: 70)
+//            .pickerStyle(SegmentedPickerStyle())
+//        }
+//    }
+//}
 
-    var body: some View {
-        VStack(spacing: 20) {
-            Picker("Unit", selection: $selectedUnit) {
-                ForEach(TemperatureUnit.allCases, id: \.self) { unit in
-                    Text("º\(unit.rawValue)").tag(unit)
-                }
-            }
-            .frame(width: 70)
-            .pickerStyle(SegmentedPickerStyle())
-        }
-    }
-}
-
-enum TemperatureUnit: String, CaseIterable {
-    case celsius = "C"
-    case fahrenheit = "F"
-}
+//enum TemperatureUnit: String, CaseIterable {
+//    case celsius = "C"
+//    case fahrenheit = "F"
+//}
 
 #Preview {
     WeatherView()
