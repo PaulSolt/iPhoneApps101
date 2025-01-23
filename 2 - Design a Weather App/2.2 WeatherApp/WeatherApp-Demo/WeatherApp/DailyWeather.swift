@@ -31,7 +31,7 @@ struct DailyWeather: View {
 
             VStack {
                 // WeatherCard
-                VStack {
+                VStack(alignment: .leading, spacing: 0) {
                     Image(systemName: "cloud.sun.fill") //"sun.max.fill") // smoke.fill
                         .resizable()
                         .scaledToFit()
@@ -47,8 +47,9 @@ struct DailyWeather: View {
                     Text("Sunny")
                         .font(.system(size: 20, weight: .regular))
                 }
+                .background() // False Color to see position alignment
                 // Force a square layout as big as possible
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading) // Control alignment of text content
                 .aspectRatio(1, contentMode: .fit)
                 // Pad the edges with 40 points
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
