@@ -21,46 +21,55 @@ struct DailyWeather: View {
     @State var selectedUnit: String = "F"
 
     var body: some View {
-        VStack {
-            Image(systemName: "sun.max.fill") // smoke.fill
-            Text("Rochester")
-            Text("73.7ºF")
-            Text("Sunny")
+        ZStack {
+            // Background
+            ContainerRelativeShape() // Rectangle()
+                .foregroundStyle(.blue)
+                .ignoresSafeArea()
+
+            // Foreground
 
             VStack {
-                TextField("City", text: $city)
-                TextField("State (optional)", text: $state)
-                TextField("Country", text: $country)
-            }
-            .textFieldStyle(.roundedBorder)
+                Image(systemName: "sun.max.fill") // smoke.fill
+                Text("Rochester")
+                Text("73.7ºF")
+                Text("Sunny")
 
-            Button {
-                print("Refresh!") // TODO: Make a network request for the weather
-            } label: {
-                Text("Refresh")
-            }
-
-            Spacer()
-        }
-        .onChange(of: city) { oldValue, newValue in
-            print("City: \(newValue)")
-        }
-        .overlay(alignment: .bottomTrailing, content: {
-//            Text("Cº") // Option + 0 = º
-            HStack {
-                Spacer()
-                Picker("Unit", selection: $selectedUnit) {
-                    ForEach(["C", "F"], id: \.self) { unit in
-                        Text("º\(unit)")
-                            .tag(unit)
-                    }
+                VStack {
+                    TextField("City", text: $city)
+                    TextField("State (optional)", text: $state)
+                    TextField("Country", text: $country)
                 }
-                .pickerStyle(.segmented)
-                .frame(width: 80)
+                .textFieldStyle(.roundedBorder)
+
+                Button {
+                    print("Refresh!") // TODO: Make a network request for the weather
+                } label: {
+                    Text("Refresh")
+                }
+
+                Spacer()
             }
-        })
-//        .background(.yellow)
-        .padding()
+            .onChange(of: city) { oldValue, newValue in
+                print("City: \(newValue)")
+            }
+            .overlay(alignment: .bottomTrailing, content: {
+                //            Text("Cº") // Option + 0 = º
+                HStack {
+                    Spacer()
+                    Picker("Unit", selection: $selectedUnit) {
+                        ForEach(["C", "F"], id: \.self) { unit in
+                            Text("º\(unit)")
+                                .tag(unit)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .frame(width: 80)
+                }
+            })
+            //        .background(.yellow)
+            .padding()
+        }
     }
 }
 
