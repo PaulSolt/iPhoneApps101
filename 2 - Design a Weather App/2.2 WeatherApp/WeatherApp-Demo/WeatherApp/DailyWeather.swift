@@ -63,7 +63,9 @@ struct DailyWeather: View {
                     TextField("State (optional)", text: $state)
                     TextField("Country", text: $country)
                 }
-                .textFieldStyle(.roundedBorder)
+//                .textFieldStyle(.roundedBorder)
+//                .textFieldStyle(MaterialTextFieldStyle(material: .thin)) // Custom style
+                .textFieldStyle(.thinMaterial) // Add your own styles
 
                 Button {
                     print("Refresh!") // TODO: Make a network request for the weather
