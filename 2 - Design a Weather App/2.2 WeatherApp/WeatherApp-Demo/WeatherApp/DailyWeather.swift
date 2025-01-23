@@ -79,6 +79,7 @@ struct DailyWeather: View {
             //        .background(.yellow)
             .padding()
         }
+        .colorScheme(.dark)
     }
 }
 
