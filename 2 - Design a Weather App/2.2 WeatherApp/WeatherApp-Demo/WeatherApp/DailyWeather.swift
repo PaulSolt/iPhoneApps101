@@ -72,6 +72,8 @@ struct DailyWeather: View {
                 } label: {
                     Text("Refresh")
                 }
+                .bold()
+                .buttonStyle(.borderedProminent)
 
                 Spacer()
             }
