@@ -125,6 +125,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		BDD6A3042D39BE0100168753 /* Run Script: Secrets.swift */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -132,6 +133,7 @@
 			);
 			inputPaths = (
 				"$(PROJECT_DIR)/../../../Secret.swift",
+				"$(SRCROOT)/Secrets/SecretTemplate.swift",
 			);
 			name = "Run Script: Secrets.swift";
 			outputFileListPaths = (
