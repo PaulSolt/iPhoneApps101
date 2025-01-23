@@ -32,10 +32,20 @@ struct DailyWeather: View {
             VStack {
                 // WeatherCard
                 VStack {
-                    Image(systemName: "sun.max.fill") // smoke.fill
+                    Image(systemName: "cloud.sun.fill") //"sun.max.fill") // smoke.fill
+                        .resizable()
+                        .scaledToFit()
+                        .symbolRenderingMode(.multicolor)
+                        .frame(width: 100, height: 100)
+
                     Text("Rochester")
+                        .font(.system(size: 30, weight: .light))
+
                     Text("73.7ºF")
+                        .font(.system(size: 50, weight: .regular))
+
                     Text("Sunny")
+                        .font(.system(size: 20, weight: .regular))
                 }
                 // Force a square layout as big as possible
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
