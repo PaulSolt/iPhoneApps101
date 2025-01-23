@@ -55,7 +55,6 @@ struct DailyWeather: View {
                 .aspectRatio(1, contentMode: .fit)
                 // Pad the edges with 40 points
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
-                .padding(.horizontal, 40) // Pad the outside edges
                 .padding(.bottom, 20)
                 .background(debugColor ? .yellow : .clear)
 
@@ -74,6 +73,7 @@ struct DailyWeather: View {
 
                 Spacer()
             }
+            .padding(.horizontal, 20) // Pad the outside edges
             .onChange(of: city) { oldValue, newValue in
                 print("City: \(newValue)")
             }
