@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		BDD6A2F32D39BDF300168753 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD6A2F32D39BDF300168753 /* WeatherApp-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -46,7 +46,7 @@
 		BDD6A2F42D39BDF300168753 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDD6A2F32D39BDF300168753 /* WeatherApp.app */,
+				BDD6A2F32D39BDF300168753 /* WeatherApp-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,9 +54,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BDD6A2F22D39BDF300168753 /* WeatherApp */ = {
+		BDD6A2F22D39BDF300168753 /* WeatherApp-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDD6A3012D39BDF500168753 /* Build configuration list for PBXNativeTarget "WeatherApp" */;
+			buildConfigurationList = BDD6A3012D39BDF500168753 /* Build configuration list for PBXNativeTarget "WeatherApp-Demo" */;
 			buildPhases = (
 				BDD6A3042D39BE0100168753 /* Run Script: Secrets.swift */,
 				BDD6A2EF2D39BDF300168753 /* Sources */,
@@ -71,11 +71,11 @@
 				BDD6A2F52D39BDF300168753 /* WeatherApp */,
 				BDD6A3052D39BE4D00168753 /* Secrets */,
 			);
-			name = WeatherApp;
+			name = "WeatherApp-Demo";
 			packageProductDependencies = (
 			);
 			productName = WeatherApp;
-			productReference = BDD6A2F32D39BDF300168753 /* WeatherApp.app */;
+			productReference = BDD6A2F32D39BDF300168753 /* WeatherApp-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -93,7 +93,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BDD6A2EE2D39BDF300168753 /* Build configuration list for PBXProject "WeatherApp" */;
+			buildConfigurationList = BDD6A2EE2D39BDF300168753 /* Build configuration list for PBXProject "WeatherApp-Demo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -107,7 +107,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BDD6A2F22D39BDF300168753 /* WeatherApp */,
+				BDD6A2F22D39BDF300168753 /* WeatherApp-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -340,7 +340,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BDD6A2EE2D39BDF300168753 /* Build configuration list for PBXProject "WeatherApp" */ = {
+		BDD6A2EE2D39BDF300168753 /* Build configuration list for PBXProject "WeatherApp-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDD6A2FF2D39BDF500168753 /* Debug */,
@@ -349,7 +349,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDD6A3012D39BDF500168753 /* Build configuration list for PBXNativeTarget "WeatherApp" */ = {
+		BDD6A3012D39BDF500168753 /* Build configuration list for PBXNativeTarget "WeatherApp-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDD6A3022D39BDF500168753 /* Debug */,
