@@ -25,9 +25,11 @@ struct DailyWeather: View {
     var body: some View {
         ZStack {
             // Background
-            ContainerRelativeShape() // Rectangle()
-                .foregroundStyle(.blue)
+            Image(.blueSky)
+                .resizable()
                 .ignoresSafeArea()
+                .scaledToFill() // BUG: Causes layout to stretch offscreen matching width of image (but we want to fill, not fit)
+                .frame(minWidth: 0) // FIX: Fixes the issue (alternate is to use GeometryReader)
 
             // Foreground
 
