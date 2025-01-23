@@ -30,10 +30,19 @@ struct DailyWeather: View {
             // Foreground
 
             VStack {
-                Image(systemName: "sun.max.fill") // smoke.fill
-                Text("Rochester")
-                Text("73.7ºF")
-                Text("Sunny")
+                // WeatherCard
+                VStack {
+                    Image(systemName: "sun.max.fill") // smoke.fill
+                    Text("Rochester")
+                    Text("73.7ºF")
+                    Text("Sunny")
+                }
+                // Force a square layout as big as possible
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .aspectRatio(1, contentMode: .fit)
+                // Pad the edges with 40 points
+                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
+                .padding(40) // Pad the outside edges
 
                 VStack {
                     TextField("City", text: $city)
