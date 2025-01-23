@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BDF0D34C2D067CEE00113302"
-               BuildableName = "WeatherDemo.app"
-               BlueprintName = "WeatherDemo"
-               ReferencedContainer = "container:WeatherDemo.xcodeproj">
+               BuildableName = "WeatherDemoNetworking.app"
+               BlueprintName = "WeatherDemoNetworking"
+               ReferencedContainer = "container:WeatherDemoNetworking.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDF0D34C2D067CEE00113302"
-            BuildableName = "WeatherDemo.app"
-            BlueprintName = "WeatherDemo"
-            ReferencedContainer = "container:WeatherDemo.xcodeproj">
+            BuildableName = "WeatherDemoNetworking.app"
+            BlueprintName = "WeatherDemoNetworking"
+            ReferencedContainer = "container:WeatherDemoNetworking.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDF0D34C2D067CEE00113302"
-            BuildableName = "WeatherDemo.app"
-            BlueprintName = "WeatherDemo"
-            ReferencedContainer = "container:WeatherDemo.xcodeproj">
+            BuildableName = "WeatherDemoNetworking.app"
+            BlueprintName = "WeatherDemoNetworking"
+            ReferencedContainer = "container:WeatherDemoNetworking.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

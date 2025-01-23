@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		BDF0D34D2D067CEE00113302 /* WeatherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF0D34D2D067CEE00113302 /* WeatherDemoNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDemoNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -46,7 +46,7 @@
 		BDF0D34E2D067CEE00113302 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDF0D34D2D067CEE00113302 /* WeatherDemo.app */,
+				BDF0D34D2D067CEE00113302 /* WeatherDemoNetworking.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,9 +54,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BDF0D34C2D067CEE00113302 /* WeatherDemo */ = {
+		BDF0D34C2D067CEE00113302 /* WeatherDemoNetworking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherDemo" */;
+			buildConfigurationList = BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherDemoNetworking" */;
 			buildPhases = (
 				BDD6A2662D39696300168753 /* Run Script - Copy Secret.swift to Project */,
 				BDF0D3492D067CEE00113302 /* Sources */,
@@ -71,11 +71,11 @@
 				BDD6A2682D396E6F00168753 /* Secrets */,
 				BDF0D34F2D067CEE00113302 /* WeatherDemo */,
 			);
-			name = WeatherDemo;
+			name = WeatherDemoNetworking;
 			packageProductDependencies = (
 			);
 			productName = WeatherDemo;
-			productReference = BDF0D34D2D067CEE00113302 /* WeatherDemo.app */;
+			productReference = BDF0D34D2D067CEE00113302 /* WeatherDemoNetworking.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -93,7 +93,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherDemo" */;
+			buildConfigurationList = BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherDemoNetworking" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -107,7 +107,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BDF0D34C2D067CEE00113302 /* WeatherDemo */,
+				BDF0D34C2D067CEE00113302 /* WeatherDemoNetworking */,
 			);
 		};
 /* End PBXProject section */
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherDemo" */ = {
+		BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherDemoNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDF0D3592D067CEF00113302 /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherDemo" */ = {
+		BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherDemoNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDF0D35C2D067CEF00113302 /* Debug */,
