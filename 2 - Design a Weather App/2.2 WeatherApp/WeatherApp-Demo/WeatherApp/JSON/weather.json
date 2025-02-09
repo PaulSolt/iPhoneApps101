@@ -1,0 +1,48 @@
+{
+  "coord": {
+    "lon": -77.6156,
+    "lat": 43.1548
+  },
+  "weather": [
+    {
+      "id": 600,
+      "main": "Snow",
+      "description": "light snow",
+      "icon": "13d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 272.25,
+    "feels_like": 266.74,
+    "temp_min": 271.53,
+    "temp_max": 273.18,
+    "pressure": 1020,
+    "humidity": 82,
+    "sea_level": 1020,
+    "grnd_level": 1004
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 5.66,
+    "deg": 280
+  },
+  "snow": {
+    "1h": 0.12
+  },
+  "clouds": {
+    "all": 100
+  },
+  "dt": 1739122774,
+  "sys": {
+    "type": 2,
+    "id": 2085738,
+    "country": "US",
+    "sunrise": 1739103373,
+    "sunset": 1739140396
+  },
+  "timezone": -18000,
+  "id": 5134086,
+  "name": "Rochester",
+  "cod": 200
+}

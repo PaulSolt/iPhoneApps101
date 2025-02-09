@@ -6,7 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BD5A9DE22D5923F50029B074 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = BD5A9DE12D5923F50029B074 /* README.txt */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		BD5A9DE12D5923F50029B074 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		BDD6A2F32D39BDF300168753 /* WeatherApp-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeatherApp-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -37,6 +42,7 @@
 		BDD6A2EA2D39BDF300168753 = {
 			isa = PBXGroup;
 			children = (
+				BD5A9DE12D5923F50029B074 /* README.txt */,
 				BDD6A3052D39BE4D00168753 /* Secrets */,
 				BDD6A2F52D39BDF300168753 /* WeatherApp */,
 				BDD6A2F42D39BDF300168753 /* Products */,
@@ -117,6 +123,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD5A9DE22D5923F50029B074 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
