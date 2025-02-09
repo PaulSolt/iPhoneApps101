@@ -6,16 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		BDBC86DC2D0E09AE00E63E60 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBC86DB2D0E09AE00E63E60 /* Secret.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		BDBC86DB2D0E09AE00E63E60 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Secret.swift; path = /Users/paulsolt/dev/SwiftUI/iPhoneApps101/Secret.swift; sourceTree = "<absolute>"; };
-		BDF0D34D2D067CEE00113302 /* WeatherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF0D34D2D067CEE00113302 /* WeatherFullDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherFullDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		BD5A9E0C2D5936940029B074 /* Secrets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Secrets;
+			sourceTree = "<group>";
+		};
 		BDF0D34F2D067CEE00113302 /* WeatherDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = WeatherDemo;
@@ -34,19 +34,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BDBC86DA2D0E098F00E63E60 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				BDBC86DB2D0E09AE00E63E60 /* Secret.swift */,
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
 		BDF0D3442D067CEE00113302 = {
 			isa = PBXGroup;
 			children = (
+				BD5A9E0C2D5936940029B074 /* Secrets */,
 				BDF0D34F2D067CEE00113302 /* WeatherDemo */,
-				BDBC86DA2D0E098F00E63E60 /* API */,
 				BDF0D34E2D067CEE00113302 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,7 +46,7 @@
 		BDF0D34E2D067CEE00113302 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDF0D34D2D067CEE00113302 /* WeatherDemo.app */,
+				BDF0D34D2D067CEE00113302 /* WeatherFullDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,10 +54,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BDF0D34C2D067CEE00113302 /* WeatherDemo */ = {
+		BDF0D34C2D067CEE00113302 /* WeatherFullDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherDemo" */;
+			buildConfigurationList = BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherFullDemo" */;
 			buildPhases = (
+				BD5A9E112D5936A60029B074 /* Run Script: Secrets.swift */,
 				BDF0D3492D067CEE00113302 /* Sources */,
 				BDF0D34A2D067CEE00113302 /* Frameworks */,
 				BDF0D34B2D067CEE00113302 /* Resources */,
@@ -75,13 +68,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				BD5A9E0C2D5936940029B074 /* Secrets */,
 				BDF0D34F2D067CEE00113302 /* WeatherDemo */,
 			);
-			name = WeatherDemo;
+			name = WeatherFullDemo;
 			packageProductDependencies = (
 			);
 			productName = WeatherDemo;
-			productReference = BDF0D34D2D067CEE00113302 /* WeatherDemo.app */;
+			productReference = BDF0D34D2D067CEE00113302 /* WeatherFullDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +93,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherDemo" */;
+			buildConfigurationList = BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherFullDemo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -113,7 +107,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BDF0D34C2D067CEE00113302 /* WeatherDemo */,
+				BDF0D34C2D067CEE00113302 /* WeatherFullDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -128,12 +122,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BD5A9E112D5936A60029B074 /* Run Script: Secrets.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(PROJECT_DIR)/../../../Secret.swift",
+				"$(SRCROOT)/Secrets/SecretTemplate.swift",
+			);
+			name = "Run Script: Secrets.swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(PROJECT_DIR)/Secrets/Secret.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n# APIKeyHelper: Paul Solt\n# Copy the Secret to our buildable folder so we can set the API key without commiting it to Github\n# NOTE: We use this in a build script\n\n# 1) Use the declared input file for the real secret:\nSOURCE_FILE=\"$SCRIPT_INPUT_FILE_0\"\n\n# 2) Destination inside the project\nDEST_FILE=\"${PROJECT_DIR}/Secrets/Secret.swift\"\nTEMPLATE_FILE=\"${PROJECT_DIR}/Secrets/SecretTemplate.swift\"\n\necho \"PROJECT_DIR:  '${PROJECT_DIR}'\"\necho \"SOURCE_FILE:  '${SOURCE_FILE}'\"\necho \"DEST_FILE:    '${DEST_FILE}'\"\n\n# --------------------------------------------------------\n# STEP A: Skip if the file already exists\n# --------------------------------------------------------\nif [ -f \"${DEST_FILE}\" ]; then\n  echo \"Secret file already exists at '${DEST_FILE}'. Skipping copy.\"\n  exit 0\nfi\n\n# --------------------------------------------------------\n# STEP B: If the user hasn't created a Secret.swift yet,\n#         copy from real Secret.swift or the template\n# --------------------------------------------------------\nif [ -f \"${SOURCE_FILE}\" ]; then\n    echo \"Found real secret at: ${SOURCE_FILE}\"\n    if cp \"${SOURCE_FILE}\" \"${DEST_FILE}\"; then\n        echo \"Copied real secret to ${DEST_FILE}\"\n    else\n        echo \"ERROR: Failed to copy ${SOURCE_FILE} → ${DEST_FILE}\"\n        exit 1\n    fi\nelif [ -f \"${TEMPLATE_FILE}\" ]; then\n    echo \"No real secret found at ${SOURCE_FILE}.\"\n    echo \"Using template file to ensure the build doesn't break.\"\n    if cp \"${TEMPLATE_FILE}\" \"${DEST_FILE}\"; then\n        echo \"Copied template to ${DEST_FILE}\"\n    else\n        echo \"ERROR: Failed to copy template from ${TEMPLATE_FILE}\"\n        exit 1\n    fi\nelse\n    echo \"ERROR: Neither real Secret.swift nor SecretTemplate.swift found.\"\n    exit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BDF0D3492D067CEE00113302 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDBC86DC2D0E09AE00E63E60 /* Secret.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherDemo" */ = {
+		BDF0D3482D067CEE00113302 /* Build configuration list for PBXProject "WeatherFullDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDF0D3592D067CEF00113302 /* Debug */,
@@ -329,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherDemo" */ = {
+		BDF0D35B2D067CEF00113302 /* Build configuration list for PBXNativeTarget "WeatherFullDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDF0D35C2D067CEF00113302 /* Debug */,

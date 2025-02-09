@@ -269,14 +269,14 @@ struct WeatherView: View {
                 return
             }
             let state = stateCode.isEmpty ? "" : ",\(stateCode)"
-            urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)\(state),\(country)&units=metric&appid=\(apiKey)"
+            urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)\(state),\(country)&units=metric&appid=\(weatherAPIKey)"
         case .coordinates:
             guard let lat = Double(latitude), let lon = Double(longitude) else {
                 errorMessage = "Invalid latitude or longitude."
                 isLoading = false
                 return
             }
-            urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&units=metric&appid=\(apiKey)"
+            urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(lat)&lon=\(lon)&units=metric&appid=\(weatherAPIKey)"
         }
 
         guard let url = URL(string: urlString) else {
