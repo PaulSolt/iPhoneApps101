@@ -14,13 +14,17 @@ import SwiftUI
 
 let debugColor = false
 
+@MainActor
 struct DailyWeather: View {
-
+    let weatherService = WeatherService()
+    
     @State var city: String = "Rochester"
     @State var state: String = "NY"
     @State var country: String = "US"
 
     @State var selectedUnit: String = "F"
+
+    @State var errorMessage: String = ""
 
     var body: some View {
         ZStack {
@@ -75,7 +79,7 @@ struct DailyWeather: View {
                 .textFieldStyle(.thinMaterial) // Add your own styles
 
                 Button {
-                    print("Refresh!") // TODO: Make a network request for the weather
+                    fetchWeather()
                 } label: {
                     Text("Refresh")
                 }
@@ -106,6 +110,23 @@ struct DailyWeather: View {
             .padding()
         }
         .colorScheme(.dark)
+        .onAppear {
+            fetchWeather()
+        }
+    }
+
+    @State var weatherData: WeatherData?
+
+    @MainActor // TODO: Make this at the class level
+    func fetchWeather() {
+        Task {
+            do {
+                weatherData = try await weatherService.fetchWeather(city: city, state: state, country: country)
+            } catch {
+                print("Error: \(error)")
+                // TODO: DecodingError, WeatherError, etc.
+            }
+        }
     }
 }
 
