@@ -115,7 +115,13 @@ struct DailyWeather: View {
     }
 
     func fetchWeather() {
-        weatherService.fetchWeather()
+        Task {
+            do {
+                try await weatherService.fetchWeather(city: city, state: state, countryCode: country)
+            } catch {
+                print("Error: \(error)")
+            }
+        }
     }
 }
 
