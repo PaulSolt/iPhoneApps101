@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		BD5A9E272D593D990029B074 /* README.md */ = {isa = PBXFileReference; explicitFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BDD6A2F32D39BDF300168753 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -37,6 +38,7 @@
 		BDD6A2EA2D39BDF300168753 = {
 			isa = PBXGroup;
 			children = (
+				BD5A9E272D593D990029B074 /* README.md */,
 				BDD6A3052D39BE4D00168753 /* Secrets */,
 				BDD6A2F52D39BDF300168753 /* WeatherApp */,
 				BDD6A2F42D39BDF300168753 /* Products */,
