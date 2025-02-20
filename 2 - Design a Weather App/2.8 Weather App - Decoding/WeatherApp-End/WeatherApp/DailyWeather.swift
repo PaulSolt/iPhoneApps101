@@ -24,6 +24,13 @@ struct DailyWeather: View {
 
     @State var selectedUnit: String = "F"
 
+    @State var icon: String = "cloud.sun.fill" // TODO: Convert from 04d to SF symbols
+    @State var cityName: String = "Rochester" // "-" Blank?
+    @State var description: String = "Sunny"
+    @State var temperature: String = "15.8ºF"
+    @State var feelsLike: String = "Feels like: 5.9ºF"
+    @State var humidity: String = "87% humidity"
+
     var body: some View {
         ZStack {
             // Background
@@ -42,20 +49,29 @@ struct DailyWeather: View {
                 // Weather Card
 
                 VStack(alignment: .center, spacing: 0) {
-                    Image(systemName: "cloud.sun.fill") // "sun.max.fill")
+                    Image(systemName: icon)
                         .resizable()
                         .scaledToFit() // Preserve the aspect ratio of the image
                         .symbolRenderingMode(.multicolor)
                         .frame(width: 100, height: 100)
 
-                    Text("Rochester")
+                    Text(cityName)
                         .font(.system(size: 30, weight: .light))
 
-                    Text("73.7ºF")
+                    Text(temperature)
                         .font(.system(size: 50))
 
-                    Text("Sunny")
+                    Text(description)
                         .font(.system(size: 20))
+                        .padding(.bottom, 4)
+
+                    // TODO: Feels like / Humidity
+                    Text(feelsLike)
+                        .font(.system(size: 14))
+
+                    Text(humidity)
+                        .font(.system(size: 14))
+
                 }
                 .background(debugColor ? .black : .clear)
                 // Force a square layout as big as possible
@@ -117,9 +133,20 @@ struct DailyWeather: View {
     func fetchWeather() {
         Task {
             do {
-                try await weatherService.fetchWeather(city: city, state: state, countryCode: country)
+                let weatherData = try await weatherService.fetchWeather(city: city, state: state, countryCode: country)
+
+                if let weather = weatherData.weather.first {
+                    icon = weather.icon // TODO: FIXME: Convert to SF Symbol
+                    description = weather.description.capitalized
+                }
+                temperature = "\(weatherData.main.temp)ºF"
+                feelsLike = "Feels like: \(weatherData.main.feelsLike)ºF"
+                humidity = "\(Int(weatherData.main.humidity))% Humidity"
+                cityName = weatherData.name
+
             } catch {
                 print("Error: \(error)")
+                // TODO: API error or other errors (Show a banner)
             }
         }
     }
