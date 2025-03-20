@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+enum TemperatureUnit: String, CaseIterable {
+    case fahrenheit = "F"
+    case celsius = "C"
+    
+    var symbol: String {
+        rawValue
+    }
+}
+
 @Observable
 class WeatherViewModel {
     private let weatherService: WeatherService = WeatherService()
@@ -25,7 +34,15 @@ class WeatherViewModel {
     var humidity: String = "87% humidity"
 
     // Temperature unit
-    var selectedUnit: String = "F"
+    var selectedUnit: TemperatureUnit = .fahrenheit {
+        didSet {
+            updateTemperatureDisplay()
+        }
+    }
+    
+    // Store raw values for conversion
+    private var rawTemperature: Double?
+    private var rawFeelsLike: Double?
 
     func fetchWeather() {
         Task {
@@ -36,8 +53,14 @@ class WeatherViewModel {
                     icon = sfSymbolName(for: weather.icon)
                     description = weather.description.capitalized
                 }
-                temperature = "\(weatherData.main.temp)ºF"
-                feelsLike = "Feels like: \(weatherData.main.feelsLike)ºF"
+                
+                // Store raw values
+                rawTemperature = weatherData.main.temp
+                rawFeelsLike = weatherData.main.feelsLike
+                
+                // Update displayed values
+                updateTemperatureDisplay()
+                
                 humidity = "\(Int(weatherData.main.humidity))% Humidity"
                 cityName = weatherData.name
 
@@ -46,6 +69,22 @@ class WeatherViewModel {
                 // TODO: API error or other errors (Show a banner)
             }
         }
+    }
+    
+    private func updateTemperatureDisplay() {
+        guard let rawTemp = rawTemperature,
+              let rawFeels = rawFeelsLike else { return }
+        
+        let (tempValue, feelsValue) = selectedUnit == .celsius 
+            ? (fahrenheitToCelsius(rawTemp), fahrenheitToCelsius(rawFeels))
+            : (rawTemp, rawFeels)
+        
+        temperature = String(format: "%.1fº%@", tempValue, selectedUnit.symbol)
+        feelsLike = String(format: "Feels like: %.1fº%@", feelsValue, selectedUnit.symbol)
+    }
+    
+    private func fahrenheitToCelsius(_ fahrenheit: Double) -> Double {
+        return (fahrenheit - 32) * 5/9
     }
 
     func sfSymbolName(for icon: String) -> String {
@@ -72,11 +111,9 @@ class WeatherViewModel {
             return "cloud.snow.fill"
         case "50d.png", "50n.png": // Mist
             return "cloud.fog.fill"
-
         default:
             // Fallback symbol if none match
             return "cloud.fill"
         }
     }
-
 }

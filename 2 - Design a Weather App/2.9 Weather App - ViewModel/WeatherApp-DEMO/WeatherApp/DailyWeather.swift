@@ -83,8 +83,8 @@ struct DailyWeather: View {
                 HStack {
                     Spacer()
                     Picker("Unit", selection: $viewModel.selectedUnit) {
-                        ForEach(["C", "F"], id: \.self) { unit in
-                            Text("º\(unit)")
+                        ForEach(TemperatureUnit.allCases, id: \.self) { unit in
+                            Text("º\(unit.symbol)")
                                 .tag(unit)
                         }
                     }
