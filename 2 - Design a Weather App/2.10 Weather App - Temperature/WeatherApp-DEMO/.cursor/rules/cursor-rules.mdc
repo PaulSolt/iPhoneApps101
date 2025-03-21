@@ -1,0 +1,75 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# iOS App Development for iOS 18 with Swift 6 and SwiftUI
+
+## Swift & SwiftUI Coding Standards (iOS 18)
+
+### Code Formatting
+- **Indentation:** 4 spaces (no tabs)
+- **Line Length:** Maximum 160 characters
+- **File Ending:** Newline at the end of every file
+- **Whitespace:** Automatically remove trailing whitespace
+- **Brace Style:** 1TBS (opening braces on the same line)
+
+### Naming Conventions
+- Adhere strictly to Swift's API Design Guidelines
+- Variables & functions: camelCase
+- Types & protocols: PascalCase
+- Be descriptive yet concise
+
+### SwiftUI View Structure
+- Use macro-based previews
+- Structure view code in the following order:
+  1. Properties
+  2. View body
+  3. Private views
+  4. Helper methods
+- Appropriately use property wrappers (`@State`, `@Binding`, etc.)
+
+### Modern Swift 6 Features
+- Replace string literals with `.imageResource` syntax for images
+- Favor Swift concurrency (`async/await`) over completion handlers
+- Adopt the new observation framework instead of `ObservableObject` when suitable
+- Utilize type-safe SwiftUI previews with Preview macros
+
+### Code Organization
+- Group related properties logically
+- Use extensions for protocol conformance
+- Keep view files focused and single-purpose
+- Organize code sections with `// MARK:` comments
+
+### Best Practices
+- Avoid force unwrapping (`!`)
+- Use `guard` statements for early returns
+- Prefer `if let` and `guard let` to optional chaining when clarity is improved
+- Favor strongly typed declarations over `Any` or `AnyObject`
+
+### SwiftUI Specific
+- Create custom `ViewModifier` for reusable styling
+- Leverage Swift macros for view construction
+- Design small, composable views
+- Choose semantic, clear names for views and modifiers
+
+### Performance
+- Prefer value types (`struct`) for views over reference types (`class`)
+- Avoid costly computations inside view bodies
+- Employ `@ViewBuilder` for complex view hierarchies
+
+### Documentation
+- Adopt DocC documentation format
+- Thoroughly document all public APIs
+
+### Error Handling
+- Use Swift's `Result` type for comprehensive error management
+- Define specific error types rather than generic `Error`
+- Explicitly handle all error cases
+
+### Testing
+- Write unit tests for critical business logic
+- Utilize SwiftUI preview testing features
+- Specifically test edge cases and error conditions
+
